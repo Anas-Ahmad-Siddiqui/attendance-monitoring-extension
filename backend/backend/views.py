@@ -9,6 +9,13 @@ import json
 import random
 
 @csrf_exempt 
+def check(request):
+    if request.method == 'GET':
+        return HttpResponse("Hello World")  
+    if request.method == 'POST':
+        return HttpResponse("Hello World") 
+
+@csrf_exempt 
 def signup(request):
     if request.method == 'GET':
         return HttpResponse("Hello World")  
